@@ -1,0 +1,91 @@
+/* nav mobile */
+.navbar__main-mobile {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  height: 555px;
+  width: 100%;
+  margin: auto;
+  display: none;
+}
+.navbar__main-mobile-course {
+  position: absolute;
+  padding: 0 100px;
+  height: 540px;
+  width: 80%;
+  overflow-y: auto;
+  /* overflow-x: none; */
+  color: var(--white-color);
+}
+.navbar__course-title {
+  margin: 12px 0;
+}
+.navbar__course-title-link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.navbar__course-entire {
+  width: 90%;
+  height: auto;
+  background-color: var(--white-color);
+  border-top: 1px solid #eb595b;
+}
+.navbar__course-list {
+  margin-left: 6px;
+  list-style: none;
+}
+.navbar__course-item {
+  cursor: pointer;
+  padding: 8px;
+}
+.navbar__course-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar__course-list .navbar__course-item:first-child {
+  padding-top: 12px;
+}
+.navbar__course-list .navbar__course-item:last-child {
+  padding-bottom: 12px;
+}
+.navbar__course-item:hover .navbar__course-link {
+  color: #495b92;
+}
+.nav__input {
+  display: none;
+}
+.navbar__main-bar {
+  display: none;
+}
+.navbar__main-close {
+  display: none;
+}
+
+/* mobile và tablet */
+@media (max-width: 1023px) {
+  .navbar__main {
+    display: none;
+  }
+  .navbar__main-bar {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 2.8rem;
+  }
+  .nav__input:checked ~ .navbar__main-mobile {
+    display: block;
+  }
+  .nav__input:checked ~ .navbar__main-close {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--white-color);
+  }
+  .nav__input:checked ~ .navbar__main-bar {
+    display: none;
+  }
+}
